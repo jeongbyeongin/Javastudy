@@ -124,7 +124,9 @@ public class MainClass {
 		result = account * 1.05; // result = account + account * 0.05;
 		
 		System.out.println(result);
+		
 	}
+	
 	public static void main(String[] args) {
 		ex08();  // ex08 메소드 호출
 	}
