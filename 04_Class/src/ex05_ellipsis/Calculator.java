@@ -9,7 +9,7 @@ public class Calculator {
 		3. 실제로는 배열로 처리된다.
 	*/
 	
-	double addition(double... numbers) {  //  (numbers) 는 배열로 처리된다.
+	double addition(double... numbers) {  //  ... 후에 오는거는 배열로 인식하면됨 .(numbers) 는 배열로 처리된다.
 		double total = 0.0;
 		for(int i = 0; i < numbers.length; i++) {
 			total += numbers[i];
