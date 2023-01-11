@@ -31,7 +31,7 @@ public class MainClass {
 		
 		Car car = new Car();
 		
-		car.addOil2(100);
+		car.addOil(100);
 		
 		for(int n = 0; n < 51; n++) {
 			car.pushAccel();

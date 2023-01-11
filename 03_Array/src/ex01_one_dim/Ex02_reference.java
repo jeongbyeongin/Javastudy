@@ -63,7 +63,7 @@ public class Ex02_reference {
 	
 	
 	public static void main(String[] args) {				
-		ex03();		
+		ex01();		
 	}
 
 }
