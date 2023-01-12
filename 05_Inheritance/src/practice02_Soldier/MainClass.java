@@ -1,4 +1,4 @@
-package ex02_has_a;
+package practice02_Soldier;
 
 public class MainClass {
 
@@ -6,7 +6,7 @@ public class MainClass {
 		
 		Soldier soldier = new Soldier();
 		
-		soldier.reload(10);
+		soldier.reload(1);
 		soldier.shoot();
 
 	}

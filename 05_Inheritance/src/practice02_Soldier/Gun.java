@@ -1,4 +1,4 @@
-package ex02_has_a;
+package practice02_Soldier;
 
 /*
 	has a 관계
