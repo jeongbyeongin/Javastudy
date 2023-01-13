@@ -12,6 +12,10 @@ public class MainClass {
 		System.out.println(student2.getName());
 		System.out.println(student2.getSchool());
 		
+		Alba alba = new Alba("상철", "가산대학교", "맥도날드");
+		System.out.println(alba.getName());
+		System.out.println(alba.getSchool());
+		System.out.println(alba.getCompany());
 	}
 
 }
