@@ -32,17 +32,27 @@ public class MainClass {
 	public static void ex03() {
 		
 		// Person
-		Person person = new Student();  // Person person(instance화 된다 라고도함. 객체 = 인스턴스) = new Person();
+		Person person = new Person();  // Person person(instance화 된다 라고도함. 객체 = 인스턴스) = new Person();
 		
 		// Student 객체(인스턴스, instance)가 맞다면 Student 타입으로 캐스팅하자.
 		if(person instanceof Student) {
-			Student student = (Student)person;
-			student.eat();
-			student.sleep();
-			student.study();
+			
+			Student student = (Student)person;  //  =  ((Student)Person).eat();
+			student.eat();		// =  ((Student)Person).eat();
+			student.sleep();	// = ((Student)person).sleep();
+			student.study();	// = ((Student)person).study();
+			
+			// person.을했을 때 원래는 study가 뜨면 안되지만  person = if라고 걸어놔서 스터디가 뜨는 것.
+			
+			
+			// 추천 // 위에보다는 아래 방법을
+			person.eat();  // sleep 이랑 같은 위치
+			person.sleep();
+			((Student)person).study();  // (eat, sleep)이랑 다른 위치
+			
 		}
+		
 	}
-	
 	
 	public static void main(String[] args) {
 		ex03();
