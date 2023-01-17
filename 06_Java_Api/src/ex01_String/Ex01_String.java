@@ -1,6 +1,6 @@
 package ex01_String;
 
-public class MainClass {
+public class Ex01_String {
 
 	public static void literal() {
 		
@@ -302,8 +302,8 @@ public class MainClass {
 		// 출력 폭 지정하기
 		System.out.println(String.format("%10d", number));  // %10d : 10자리로 표시하시오. 숫자는 오른 쪽에 표시하시오.
 		System.out.println(String.format("%-10d", number));  // %-10d : 10자리로 표시하시오. 숫자는 왼쪽에 표시하시오.
-		System.out.println(String.format("%5s", str));  // %5s : 5자리로 표시하시오.           "
-		System.out.println(String.format("%-5s", str));  // %-5s : 5자리로 표시하시오.         " 
+		System.out.println(String.format("%5s", str));  // %5s : 5자리로 표시하시오.  문자는         "
+		System.out.println(String.format("%-5s", str));  // %-5s : 5자리로 표시하시오.  문자는         " 
 		
 	}
 

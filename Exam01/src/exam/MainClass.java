@@ -10,7 +10,7 @@ public class MainClass {
 	public static void q1() {
 		int number = 1234567;
 		while(number >= 10) {
-			number /= 10;
+			number /= 10;       // number = number / 10;
 		}
 		if(number % 2 == 1) {
 			System.out.println("남자입니다.");
@@ -93,23 +93,19 @@ public class MainClass {
 	// 문제4. begin부터 end 사이의 모든 정수들의 평균을 출력하시오.
 	// 단, 항상 begin은 end보다 작거나 같은 상태이다.
 	// 예시
-	// 1부터 6사이 모든 정수의 평균은 3.5입니다.
+	// 1부터 6사이 모든 정수의(모두 더했을 때) 평균은 3.5입니다.
 	public static void q4() {
 		int begin = 1;   
 		int end = 6;
 		int total = 0;  
-		int a = 0;
-		double b = 0;
 		
-		for(int i = begin; i <= end; i++){
-		   total += i;
-		   a++;
+		for(int n = begin; n <= end; n++) {
+			total += n;
 		}
-
-		b = (double) total / a;
-
-		System.out.println(begin + "부터" + end + "사이의 모든 정수의 평균은 " + (double)b + " 입니다.");
+		System.out.println(begin + "부터" + end + "사이 모든 정수의 평균은" + total / (end - begin + 1.0));
+		
 	}
+			
 	/*
 	    public static void q4() {
 		int begin = 1;   
@@ -121,11 +117,6 @@ public class MainClass {
 		System.out.println(begin + "부터" + end + "사이의 모든 정수의 평균은 " + total / (end - begin + 1.0) + "입니다");
 	}
 	 */
-	
-	
-	
-	
-	
 	
 	
 	
