@@ -9,7 +9,12 @@ public class Espresso {
 	private int water;              // 물
 	
 	// 생성자
-	
+	public Espresso(CoffeeBean coffeeBean, int water) {
+		super();
+		this.coffeeBean = coffeeBean;
+		this.water = water;
+	}
+
 	// 필요한 메소드
 	
 }
