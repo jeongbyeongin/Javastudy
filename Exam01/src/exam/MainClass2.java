@@ -15,6 +15,7 @@ public class MainClass2 {
 			absNumber = -number;  // absNumber = number * -1;
 		}
 		*/
+		
 		int absNumber = (number >= 0) ? number : -number;
 		System.out.println(absNumber);
 	}
@@ -102,47 +103,60 @@ public class MainClass2 {
 		
 	}
 	
-	// 문제7. 2차원 배열에 구구단 결과 저장하기
-	/*
-	  2  4  6  8 10 12 14 16 18
-	  3  6  9 12 15 18 21 24 27
-	  4  8 12 16 20 24 28 32 36
-	  5 10 15 20 25 30 35 40 45
-	  6 12 18 24 30 36 42 48 54
-	  7 14 21 28 35 42 49 56 63
-	  8 16 24 32 40 48 56 64 72
-	  9 18 27 36 45 54 63 72 81
-	*/
-	public static void ex07() {
-		
-		int[][] arr = new int[8][9];
-		
-		for(int i = 0; i < arr.length; i++) {
-			for(int j = 0; j < arr[i].length; j++) {
-				arr[i][j] = (i + 2) * (j + 1);
-			}
-		}
-		
-		for(int i = 0; i < arr.length; i++) {
-			for(int j = 0; j < arr[i].length; j++) {
-				System.out.print( String.format("%3d", arr[i][j]) );
-			}
-			System.out.println();
-		}
-		
-		System.out.println("-----");
-	
-		for(int i = 0; i < arr.length; i++) {
-			System.out.println( Arrays.toString(arr[i]) );
-		}
-		
-		System.out.println("-----");
-		
-		for(int[] a : arr) {
-			System.out.println( Arrays.toString(a) );
-		}
-		
-	}
+	   // 문제7. 2차원 배열에 구구단 결과 저장하기
+	   // 예시) 2 4 6 8 ... 18
+	   //       3 6 9 12 ... 27
+	   //       ...
+	   //       9 18 27 36 ... 81
+	   public static void ex07() {
+	      
+	      int[][] arr = new int[8][9];
+	      
+	      // 밑의 for문은 사실 상 합쳐서 작성해야하지만, 계산하고 출력하는 걸 보여주기 위해 따로 작성
+	      for(int i = 0; i < arr.length; i++) {
+	         for(int j = 0; j < arr[i].length; j++) {
+	            arr[i][j] = (i + 2) * (j + 1);
+	         }
+	      }   
+	      
+	      for(int i = 0; i < arr.length; i++) {
+	         for(int j = 0; j < arr[i].length; j++) {
+	            System.out.print(String.format("%3d", arr[i][j]));
+	         }
+	         System.out.println();
+	      }
+	      
+	      System.out.println("-----------");
+	      
+	      for(int i = 0; i < arr.length; i++) {
+	         System.out.println(Arrays.toString(arr[i]));
+	      }      
+	      
+	      System.out.println("-----------");
+	      
+	      for(int[] a : arr) {
+	         System.out.println(Arrays.toString(a));
+	      }
+	      
+	      /*
+	       arr[0][0] = 2 * 1;
+	       arr[0][1] = 2 * 2;
+	       arr[0][2] = 2 * 3;
+	       arr[0][3] = 2 * 4;
+	       
+	       arr[1][0] = 3 * 1;
+	       arr[1][1] = 3 * 2;
+	       arr[1][2] = 3 * 3;
+	       arr[1][3] = 3 * 4;
+	       
+	       arr[2][0] = 4 * 1;
+	       arr[2][1] = 4 * 2;
+	       arr[2][2] = 4 * 3;
+	       arr[2][3] = 4 * 4;
+	       
+	       arr[i][j] = (i + 2) * (j + 1);
+	       */
+	   }
 	
 	// 문제8. int score에 해당하는 학점을 출력하시오. switch문을 활용하시오.
 	// 100    : S
@@ -235,7 +249,7 @@ public class MainClass2 {
 	}
 	
 	public static void main(String[] args) {
-		ex06();
+		ex07();
 	}
 
 }

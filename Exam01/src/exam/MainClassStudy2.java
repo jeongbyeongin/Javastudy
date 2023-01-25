@@ -101,10 +101,65 @@ public class MainClassStudy2 {
 			System.out.println(Arrays.toString(count));
 		}
 		
-	
+		// 문제7. 2차원 배열에 구구단 결과 저장하기
+		/*
+		  2  4  6  8 10 12 14 16 18
+		  3  6  9 12 15 18 21 24 27
+		  4  8 12 16 20 24 28 32 36
+		  5 10 15 20 25 30 35 40 45
+		  6 12 18 24 30 36 42 48 54
+		  7 14 21 28 35 42 49 56 63
+		  8 16 24 32 40 48 56 64 72
+		  9 18 27 36 45 54 63 72 81
+		*/
+		public static void ex07() {
+			
+			int[][] arr = new int[8][9];
+			
+			for(int i = 0; i < arr.length; i++) {
+				for(int j = 0; j < arr[i].length; j++) {
+					arr[i][j] = (i + 2) * (j + 1);
+				}
+			}
+			
+			for(int i = 0; i < arr.length; i++) {
+				for(int j = 0; j < arr[i].length; j++) {
+					System.out.print(String.format("%3d", arr[i][j]));
+				}
+				System.out.println();
+			}
+			
+			System.out.println("---------------------------");
+		
+			for(int i = 0; i < arr.length; i++) {
+				System.out.println(Arrays.toString(arr[i]));
+			}
+			
+			System.out.println("---------------------------");
+			
+			for(int[] a : arr) {
+				System.out.println(Arrays.toString(a));
+			}
+		
+		
+		}
+		// 문제8. int score에 해당하는 학점을 출력하시오. switch문을 활용하시오.
+		// 100    : S
+		//  99~97 : A+
+		//  96~94 : A0
+		//  93~90 : A-
+		//  89~87 : B+
+		//  86~84 : B0
+		//  83~80 : B-
+		//  79~77 : C+
+		//  76~74 : C0
+		//  73~70 : C-
+		//  69~0  : F
+		// 예시)
+		// 점수 98점은 학점 A+입니다.
 	
 	public static void main(String[] args) {
-		ex06();
+		ex08();
 
 	}
 
