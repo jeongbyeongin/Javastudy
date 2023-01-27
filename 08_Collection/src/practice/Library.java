@@ -19,7 +19,7 @@ public class Library {
 	private void addBook() {
 		System.out.println("=== 책 추가하기 ===");
 		System.out.println("isbn >>>");
-		String isbn = sc.next();
+		String isbn = sc.next();			// sc.next() = String문자열을 입력받아주는 코
 		System.out.println("title >>>");
 		String title = sc.next();
 		System.out.println("author >>>");
