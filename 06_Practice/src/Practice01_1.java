@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
-public class Practice01 {
+public class Practice01_1 {
 
 	// 문제1. 가위바위보
 	// 실행
@@ -16,21 +16,21 @@ public class Practice01 {
 	//	2 - > 0 :  2
 
 	public static void ex01() {
-
+		
 		List<String> list = Arrays.asList("가위","바위","보");
-
+		
 		Scanner sc = new Scanner(System.in);
-
-		System.out.print("가위바위보 >>> ");
-
+		
+		System.out.println("가위바위보 >>>");
+		
 		String input = sc.next();
-
-		int user = list.indexOf(input);		// intdexOf  = 몇번째 인덱스에 있는지..
-
+		
+		int user = list.indexOf(input);
+		
 		int com = (int)(Math.random()*3);
-
+		
 		int result = user-com;
-
+		
 		switch(result) {
 		case 0 :
 			System.out.println("비겼습니다."); break;
@@ -40,57 +40,62 @@ public class Practice01 {
 			System.out.println("사용자가 이겼습니다.");
 		}
 		sc.close();
-		System.out.println("당신은 " + input + " 컴퓨터는 " + list.get(com));
-
+		System.out.println("당신은" + input + " 컴퓨터는 " + list.get(com));
+		
+		
+		
 	}
 
+		
 	// 문제2. 친구 3명을 저장할 수 있는 배열을 생성하고 임의의 값으로 초기화하시오.
 	// 새로 사귄 친구의 수를 입력 받아서 기존 친구들이 저장된 배열의 길이를 새로 사귄 친구의 수만큼 늘리시오.
 	public static void ex02() {
-
+		
 		int[] frd1 = {1,2,3};
-
+		
 		Scanner sc = new Scanner(System.in);
-
-		System.out.print("새로 사귄 친구의 수 >>> ");
-
+		
+		System.out.println("새로 사귄 친구의 수 >>>");
+		
 		int nfrd = sc.nextInt();
 		sc.close();
-
+		
 		int[] frd2 = new int[frd1.length + nfrd];
-
-		for(int i=0; i < frd1.length; i++) {
+		
+		for(int i = 0; i < frd1.length; i++) {
 			frd2[i] = frd1[i];
 		}
-
-
-		System.out.println( "주소 변경 전 : "+Arrays.toString(frd1));
-
+		
+		System.out.println( "주소 변경 전 : " + Arrays.toString(frd1));
+		
 		frd1 = frd2;
-
+		
 		System.out.println("주소 변경 후 : " + Arrays.toString(frd1));
-
-
+		
 	}
+
+		
 
 	// 문제3. Scanner 클래스의 next() 메소드를 이용해서 사용자로부터 문자열을 계속 입력 받는다.
 	// 사용자가 "종료" 문자열을 입력하면 더 이상 입력 받지 않는다.
 	// 총 몇 번만에 종료되었는지 그 횟수를 마지막에 출력한다.
 	public static void ex03() {
+		
 		Scanner sc = new Scanner(System.in);
-
+		
 		int count = 0;
 		String input = "";
-
+		
 		while(true) {
-			System.out.print("문자열을 입력하시오. >>>");
+			System.out.println("문자열을 입력하시오 >>>");
 			input = sc.next();
 			count++;
 			if(input.equals("종료")) break;
 		}
-
+		
 		System.out.println(count + "번 입력했습니다.");
 		sc.close();
+		
 	}
 
 	// 문제4. 퀴즈 정답을 맞힐때까지 계속 퀴즈를 내시오.
@@ -103,19 +108,17 @@ public class Practice01 {
 	public static void ex04() {	
 
 		Scanner sc = new Scanner(System.in);
-
+		
 		while(true) {
-			System.out.print("질문 : 대한민국의 수도는? >>>" );
+			System.out.println("질문 : 대한민국의 수도는? >>>");
 			String answer = sc.next();
-			if(answer.equals("서울") || answer.equalsIgnoreCase("seoul")) {
-				System.out.println("정답입니다.");
+			if(answer.equals("서울") || answer.equalsIgnoreCase("seooul")) {
 				break;
 			} else {
 				System.out.println("오답입니다.");
 			}
-		}
+		} 
 		sc.close();
-
 	}
 
 	// 문제5. 평점 입력 받아서 해당 평점만큼 ★을 출력하시오.
@@ -305,7 +308,7 @@ public class Practice01 {
 	}
 
 	public static void main(String[] args) {
-		ex07();
+		ex04();
 	}
 
 }

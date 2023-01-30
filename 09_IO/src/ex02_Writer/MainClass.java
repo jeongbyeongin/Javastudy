@@ -158,7 +158,7 @@ public class MainClass {
 		}
 		File file = new File(dir, "ex04.txt");
 		
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) { 		// finally . close 대신 알아서 닫아줌.
 			
 			bw.write("안녕하세요 반갑습니다.");
 					System.out.println("ex04.txt 파일이 생성되었다.");
