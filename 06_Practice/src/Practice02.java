@@ -12,7 +12,16 @@ public class Practice02 {
 	// 출금 전 1원, 6회 출금액 1원, 출금 후 0원
 	public static void ex01() {
 		
+		int balance = 5000;
+		int count = 0;
+		
+		while(balance > 0) {
+			count++;
+			int withdraw = (int)(Math.random() * balance) + 1;
+			System.out.println("출금 전" + balance + "원, " + count + "회 출금액" + withdraw + "원, 출금 후" + (balance -= withdraw) + "원");		}
+		
 	}
+
 	
 	// 문제2. UpDown 게임
 	// 1 ~ 10000 사이의 난수를 발생시키고 해당 난수를 사용자가 맞히는 게임이다.
@@ -185,7 +194,7 @@ public class Practice02 {
 	}
 	
 	public static void main(String[] args) {
-		ex10();
+		ex01();
 	}
 
 }

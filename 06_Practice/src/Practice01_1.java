@@ -184,20 +184,17 @@ public class Practice01_1 {
 	public static void ex07() {
 
 		Scanner sc = new Scanner(System.in);
-
+		
 		int a = (int)(Math.random()*8) + 2;
 		int b = (int)(Math.random()*9) + 1;
-
+		
 		String answer = a*b + "";
-
-		System.out.print(a +"x"+b+"? >>> ");
-
+		
+		System.out.println(a + "x" + b +"=? >>> ");
+		
 		String input = sc.next();
-
-		if(answer.equals(input)) {
-			System.out.println("정답~ 짝!짝!짝!");
-		} else {
-			System.out.println("오답 ㅋㅋ");
+		
+		
 		}
 
 //		double r = (Math.random()*8)+2;// 0 <= r < 1	0<= r < 8	2 <= r < 10

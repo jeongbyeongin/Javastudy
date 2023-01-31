@@ -64,10 +64,10 @@ public class MainClass {
 			
 			String str = "안녕하세요";
 			
-			// getBytes(Charset charset)
-			byte[] b = str.getBytes(StandardCharsets.UTF_8);		// 인코딩해서 만들기..	
+			// getBytes(Charset charset)							// 자바 버전 1.1
+			byte[] b = str.getBytes(StandardCharsets.UTF_8);		// 인코딩해서 만들기..	자바 버전 1.7
 			
-			// getBytes(String charsetName)						
+			// getBytes(String charsetName)							// 자바 버전 1.6		
 			// byte[] b = str.getBytes("UTF-8");				
 			
 			fos.write(b);
