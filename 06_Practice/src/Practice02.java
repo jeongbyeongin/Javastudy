@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Practice02 {
 
 	// 문제1. 통장(balance)에 최초 5000원이 있다.
@@ -17,10 +19,12 @@ public class Practice02 {
 		
 		while(balance > 0) {
 			count++;
-			int withdraw = (int)(Math.random() * balance) + 1;
-			System.out.println("출금 전" + balance + "원, " + count + "회 출금액" + withdraw + "원, 출금 후" + (balance -= withdraw) + "원");		}
+			int rd = (int)(Math.random() * balance) +1;
+			System.out.println("출금 전" + balance + "원," +count+"회 출금액" + rd + "원, 출금 후 " + (balance -= rd) + "원");
+		}
+			}
 		
-	}
+	
 
 	
 	// 문제2. UpDown 게임
@@ -36,6 +40,28 @@ public class Practice02 {
 	// 정답. 총 5번만에 성공.
 	public static void ex02() {
 		
+	Scanner sc = new Scanner(System.in);
+	
+	int rd = (int)(Math.random() * 10000) + 1;	
+	int input = 0;
+	int count = 0;
+	
+	System.out.println(rd);
+	while(rd != input) {
+		System.out.println("입력 하시오");
+		input = sc.nextInt();
+		if(rd < input) {
+			System.out.println(" down " + ++count + "회" );
+		}
+		if(rd > input) {
+			System.out.println(" up " + ++count + "회");
+		}
+		if(rd == input) {
+			System.out.println("정답입니다" + ++count + "회");
+			sc.close();
+		}
+		
+	}
 	}
 	
 	// 문제3. 자동으로 진행되는 윷 던지기를 구현하시오. 윷이나 모가 나오면 추가로 던지시오.
@@ -46,6 +72,9 @@ public class Practice02 {
 	// "윷", "도", 5칸 이동한다.
 	// "모", "윷", "도", 10칸 이동한다.
 	public static void ex03() {
+		
+	
+		
 		
 	}
 	
@@ -63,6 +92,24 @@ public class Practice02 {
 	// 8 : ####### 7
 	// 9 : ########### 11
 	public static void ex04() {
+	
+	int[] arr = new int[100];
+	int[] count = new int[10];
+	
+	for(int i = 0; i < arr.length; i ++) {
+		arr[i] = (int)(Math.random() * 10);
+		count[arr[i]]++;		
+	}
+	for(int i = 0; i < count.length; i++) {
+		StringBuilder sb = new StringBuilder();
+			for(int j = 0; j < arr[i]; j ++) {
+				sb.append("#");
+			}
+		String graph = sb.toString();
+		System.out.println(i + " " + graph + " " + count[i]);
+	}
+	
+		
 		
 	}
 	
@@ -95,7 +142,7 @@ public class Practice02 {
 	// 예시)
 	// 봄을 영어로 하면? >>> spring
 	// 정답
-	// 여름을 영어로 하면? >>> sumer
+	// 여름을 영어로 하면? >>> summer
 	// 오답
 	// 가을을 영어로 하면? >>> fall
 	// 정답
@@ -103,7 +150,28 @@ public class Practice02 {
 	// 오답
 	public static void ex06() {
 		
-	}
+		Scanner sc = new Scanner(System.in);
+		String[][] season = {
+				{"봄", "spring"},
+				{"여름", "summer"},
+				{"가을", "fall"},
+				{"겨울", "win"}
+		};
+		for(int i = 0; i < season.length; i++) {
+			System.out.print(season[i][0] + "을 영어로 하면 ?????");
+			String answer = sc.next();
+			if(answer.equalsIgnoreCase(season[i][1])) {
+				System.out.println("정답");
+			} else {
+				System.out.println("오답");
+			}
+		}
+		sc.close();
+		
+		}
+		
+	
+	
 	
 	// 문제7. 다음 순서에 따라서 5 x 5 형태의 숫자 빙고판을 자동으로 생성하시오.
 	// 지시사항)
@@ -125,6 +193,8 @@ public class Practice02 {
 	//  16 22 18 24 23
 
 	public static void ex07() {
+		
+	
 		
 	}
 	
@@ -194,7 +264,7 @@ public class Practice02 {
 	}
 	
 	public static void main(String[] args) {
-		ex01();
+		ex06();
 	}
 
 }

@@ -82,7 +82,7 @@ public class Ex01_array {
 	}
 			
 	public static void main(String[] args) {
-		ex02();
+		ex01();
 
 	}
 

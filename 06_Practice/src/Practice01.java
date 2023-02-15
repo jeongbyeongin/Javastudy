@@ -181,21 +181,16 @@ public class Practice01 {
 	public static void ex07() {
 
 		Scanner sc = new Scanner(System.in);
-
-		int a = (int)(Math.random()*8) + 2;
-		int b = (int)(Math.random()*9) + 1;
-
-		String answer = a*b + "";
-
-		System.out.print(a +"x"+b+"? >>> ");
-
-		String input = sc.next();
-
-		if(answer.equals(input)) {
-			System.out.println("정답~ 짝!짝!짝!");
-		} else {
-			System.out.println("오답 ㅋㅋ");
-		}
+		
+		int dan = (int)(Math.random() * 8) + 2;
+		int n = (int)(Math.random() * 9) + 1;
+		
+		System.out.println(dan + "x" + n + "? = >>>");
+		int answer = sc.nextInt();
+		
+		System.out.println(dan * n == answer ? "정답" : "땡");
+		sc.close();
+		
 
 //		double r = (Math.random()*8)+2;// 0 <= r < 1	0<= r < 8	2 <= r < 10
 //									 // 0 ~ 0.9999	0 ~ 7.9999		2 ~ 9
@@ -212,42 +207,40 @@ public class Practice01 {
 	// 예시)
 	// 28살 여자입니다.
 	public static void ex08() {
-
+		
+		String personalId = "941114-1338811";
+		String number = personalId.substring(0, 2);
+		int nb = Integer.parseInt(number);
+		
+		String number2 = personalId.substring(7, 8);
+		int nb1 = Integer.parseInt(number2);
+		
+		
 		Calendar now = Calendar.getInstance();
-
 		int year = now.get(Calendar.YEAR);
-
-		Scanner sc = new Scanner(System.in);
-
-		while(true) {
-			System.out.print("-을 포함한 주민등록번호를 입력하세요.");
-
-			String id = sc.next();
-
-			if(id.length()==14 && id.substring(6,7).equals("-")) {
-
-				int age;
-
-				if(id.substring(0, 1).equals("9")) {
-					age = year - (Integer.parseInt(id.substring(0, 2)) + 1900);
-				} else {
-					age = year - (Integer.parseInt(id.substring(0, 2)) + 2000);
-
-				}
-
-				String gender = id.substring(id.indexOf("-")+1,id.indexOf("-")+2);
-
-				if(gender.equals("1") || gender.equals("3")) {
-					System.out.println(age + "세 남자입니다.");
-					return;
-				}else {
-					System.out.println(age + "세 여자입니다.");
-					return;
-				}
-			}else {
-				System.out.println("잘못된 주민등록번호 입니다.");
-			}
+		
+		int age = 0;
+		switch(nb1) {
+		case 1 :
+		case 2 : age = year - (nb + 1900) +1;
+		break;
+		case 3 :
+		case 4 : age = year - (nb + 2000) +1;
+		
 		}
+		
+		String man = "";
+		
+		switch(nb1) {
+		case 1:
+		case 3: man = "남자";
+		break;
+		case 2:
+		case 4: man = "여자";
+		}
+		
+		System.out.println(age + "살" + man + "입니다." );
+		
 	}
 
 	// 문제9. 다음 기준에 따라서 파일명을 변환하시오.
@@ -258,17 +251,23 @@ public class Practice01 {
 	// 변환 후 파일명 = happy_1658792128410.jpg
 	public static void ex09() {
 
-		long ts = System.currentTimeMillis(); 
-
+		long ts = System.currentTimeMillis();		// 지금 현재시간 1000/1 초까지 알려주
+		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("파일명을 입력하시오 >>>");
-		String fileName = sc.next();
-
-		String name = fileName.substring(0, fileName.indexOf(".")) + "_" + (ts+"");
-		String newFileName = name +fileName.substring(fileName.indexOf("."), fileName.length());
-
-		System.out.println("변환 전 파일명 : " + fileName);
-		System.out.println("변환 후 파일명 : " + newFileName);
+		System.out.println("파일명을 입력하시오");
+		String file = sc.next();
+		
+		String newfile = file.substring(0, file.indexOf(".")) + "_" + (ts + "") + file.substring(file.indexOf("."));
+		
+		System.out.println("변환 전 파일명 : " + file);
+		System.out.println("변환 후 파일명 : " + newfile);
+		sc.close();
+		
+		
+		
+		
+		
+		
 
 		//		String newFileName = fileName.su
 
@@ -301,11 +300,11 @@ public class Practice01 {
 		}
 
 		System.out.println("저 아세요?");
-
+		sc.close();
 	}
 
 	public static void main(String[] args) {
-		ex07();
+		ex09();
 	}
 
 }
