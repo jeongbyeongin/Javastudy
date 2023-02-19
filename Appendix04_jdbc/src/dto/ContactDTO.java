@@ -4,21 +4,23 @@ public class ContactDTO {
 
 	private int contact_no;
 	private String name;
-	private String TEL;
+	private String tel;
 	private String email;
 	private String address;
 	
 	// 소스에서 유징필드
 	public ContactDTO() { }
 
-	public ContactDTO(int contact_no, String name, String tEL, String email, String address) {
+	public ContactDTO(int contact_no, String name, String tel, String email, String address) {
 		super();
 		this.contact_no = contact_no;
 		this.name = name;
-		TEL = tEL;
+		this.tel = tel;
 		this.email = email;
 		this.address = address;
 	}
+
+	
 
 
 	public int getContact_no() {
@@ -37,12 +39,12 @@ public class ContactDTO {
 		this.name = name;
 	}
 
-	public String getTEL() {
-		return TEL;
+	public String getTel() {
+		return tel;
 	}
 
-	public void setTEL(String tEL) {
-		TEL = tEL;
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	public String getEmail() {
@@ -60,10 +62,10 @@ public class ContactDTO {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "ContactDTO [contact_no=" + contact_no + ", name=" + name + ", TEL=" + TEL + ", email=" + email
+		return "ContactDTO [contact_no=" + contact_no + ", name=" + name + ", TEL=" + tel + ", email=" + email
 				+ ", address=" + address + "]";
 	}
 	

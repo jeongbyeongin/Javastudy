@@ -27,11 +27,23 @@ public class ContactController {
 		case "1":
 			service.addContact();
 			break;
+		case "2":
+			service.removeContact();
+			break;
+		case "3":
+			service.modifyContact();
+			break;
+		case "4":
+			service.findContactsByName();
+			break;
+		case "5":
+			service.findALLContacts();
+			break;
 		case "0":
-			System.out.println("연락처 관리 프로그램이 종료되었습니다.ㅋㅎ");
+			System.out.println("연락처 관리 프로그램이 종료되었습니다라고합니다-");
 			return;
 		default:
-			System.out.println("잘못된 입력입니다. 다시 시도하세요.");
+			System.out.println("잘못된 입력입니다. 다시 시도하세요.예 ?");
 			}
 		}
 	}
