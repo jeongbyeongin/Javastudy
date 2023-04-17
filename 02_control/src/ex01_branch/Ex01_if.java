@@ -7,7 +7,7 @@ public class Ex01_if {
 	
 		// if 문
 		
-		int score = 80;
+		int score = 59;
 		
 		if (score >= 60)
 			System.out.println("합격");
@@ -34,9 +34,14 @@ public class Ex01_if {
 			}
 			
 	}
+	public static void ex03() {
+		String[]name = {"구","디","아","카","데","미"};
+		System.out.println(name.length);
+		}
+	
 	
 	public static void main(String[] args) {
-		ex02();
+		ex01();
 		
 			
 		

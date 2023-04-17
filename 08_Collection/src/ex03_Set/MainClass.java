@@ -28,7 +28,7 @@ public class MainClass {
 		set.add("winter");
 		
 		// 제거
-		set.remove("winter");
+//		set.remove("winter");
 		
 		// 확인
 		System.out.println(set);
@@ -106,7 +106,7 @@ public class MainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex06();
+		ex01();
 
 	}
 

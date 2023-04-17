@@ -123,8 +123,8 @@ public class Ex01_String {
 		
 		String name = "장종찬";  // 장(0) 종(1) 찬(2)
 		
-		String familyName = name.substring(0, 1);  // 성 0~ 1까지
-		String givenName = name.substring(1);  // 이름 1~ 끝까지
+		String familyName = name.substring(0, 2);  // 성 0~ 1까지
+		String givenName = name.substring(0);  // 이름 1~ 끝까지
 		
 		System.out.println(familyName);
 		System.out.println(givenName);
@@ -203,7 +203,7 @@ public class Ex01_String {
 		// public interface CharSequence { }
 		// public class String implements CharSequence { }
 		
-		String email = "quddlsy6@naver.com";
+		String email = "quddlsy6naver.com";
 		
 		if(email.contains("@")) {
 			System.out.println("이메일이 맞다.");
@@ -338,7 +338,7 @@ public class Ex01_String {
 	}
 	
 	public static void main(String[] args) {
-		format();
+		contains();
 
 	}
 

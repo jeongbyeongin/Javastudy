@@ -1,7 +1,5 @@
 package ex01_variable;
 
-import java.nio.file.ClosedFileSystemException;
-
 public class MainClass {
 
     // single comment - 주석(설명)
@@ -69,7 +67,7 @@ public class MainClass {
 		// 정수 구분의 기준
 		System.out.println(Integer.MAX_VALUE);
 		
-		// 실수 타입		
+		// 실수 타입
 		double leftEye = 0.7;
 		double rightEye = 1.2;
 		System.out.println(leftEye);
@@ -81,9 +79,16 @@ public class MainClass {
 		String country = new String("Korea");  // 대부분의 참조 타입 사용법
 		System.out.println(country);
 		
+		String name1 = "----자기소개----";
+		String name2 = "이름 : 정병인";
+		System.out.println(name1 + name2);
+		
 		//상수 선언하기(final 키워드 필요)
 		final double PI = 3.141592;
 		System.out.println(PI);
+		
+		
+		
 		
 		
 		

@@ -141,7 +141,7 @@ public class Ex01_array {
 			if(max < scores[i]) {
 				max = scores[i];
 			}
-			if(min > scores[i]) {
+			else if(min > scores[i]) {
 				min = scores[i];
 				
 			}
@@ -181,7 +181,7 @@ public class Ex01_array {
 
 
 	public static void main(String[] args) {
-		ex07();
+		ex06();
 
 	}
 

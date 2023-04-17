@@ -92,7 +92,7 @@ public class Ex06_LocalDateTime {  // 요즘 사용
 	}
 	
 	public static void main(String[] args) {
-		ex04();
+		ex01();
 
 	}
 

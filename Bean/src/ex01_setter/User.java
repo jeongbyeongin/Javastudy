@@ -22,4 +22,6 @@ public class User {
 		return "User [id=" + id + ", pw=" + pw + "]";
 	}
 	
+	
+	
 }

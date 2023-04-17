@@ -109,7 +109,7 @@ public class Ex03_else_if {
 	}
 
 	public static void main(String[] args) {
-		ex03();
+		ex01();
 	
 
 	}

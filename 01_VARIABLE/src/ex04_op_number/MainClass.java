@@ -40,7 +40,7 @@ public class MainClass {
 			
 		int min = second / 60;  // 1
 		int sec = second % 60;  // 30
-			
+		
 		System.out.println(min);
 		System.out.println(sec);
 		}

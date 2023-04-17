@@ -19,7 +19,6 @@ public class Ex02_while {
 			System.out.println(a);
 			a++;
 		}
-		
 	}
 	
 	public static void ex02() {
@@ -38,7 +37,7 @@ public class Ex02_while {
 	}
 	
 	public static void main(String[] args) {
-		ex02(); 
+		ex01(); 
 			
 		
 

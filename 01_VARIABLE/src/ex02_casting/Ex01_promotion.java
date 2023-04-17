@@ -8,11 +8,27 @@ public class Ex01_promotion {
 		// 1. 작은 크기 -> 큰 크기
 		// 2. 정수 -> 실수
 		
+		
+		
+		
 		long money = 10000;  // 4바이트를 사용한 10000이 8바이트 money로 promotion된다.
 		System.out.println(money);
 		
 		double score = 90;  // 정수 90이 실수 90.0으로 promotion 된다.
 		System.out.println(score);
+		
+		int n = 20;
+		int a = 0;
+		int b = 0;
+		int answer = 0;
+		
+		if(a * b == n);
+		answer++;
+		System.out.println(answer);
+		
+		
+		
+		
 
 	}
 

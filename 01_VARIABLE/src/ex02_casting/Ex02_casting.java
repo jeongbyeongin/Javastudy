@@ -7,6 +7,7 @@ public class Ex02_casting {
 		// 강제 변환
 		// 1. 큰 크기 -> 작은 크기
 		// 2. 실수 -> 정수
+
 		
 		int n = 256;
 		byte bn =(byte)n;  // 변수 n을 byte 타입으로 바꾸시오.
@@ -20,7 +21,8 @@ public class Ex02_casting {
 		
 		
 		
-		
+		String str = "1";
+		int a = Integer.parseInt(str);
 
 	}
 

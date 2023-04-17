@@ -197,7 +197,7 @@ public class MainClass {
 
         for (int i = 0; i < 5 ;  i++ ) {
           if (characters[i] == ch ) {
-    count ++ ;
+        	  count ++ ;
   }
 }
   System.out.println(count);
@@ -326,7 +326,8 @@ public class MainClass {
 		int[] scores = {50, 60, 90, 80, 70};
 		int max = scores[0];  // 50 점수
 		int maxNo = 0;        // 0 그 학생은 0번이다
-		for(int i = 1; i < scores.length; i++) {
+		
+		for(int i = 0; i < scores.length; i++) {
 			if(max < scores[i]) {
 				max = scores[i];   // 90
 				maxNo = i;         // 2

@@ -7,6 +7,22 @@ public class MainClass {
 		// 구문 분석 (parsing)
 		// 문자열을 기본 타입으로 변환하는 과정을 의미한다.
 		
+		
+		int a = 10;
+		int b = 20;
+		int c = 0;
+		
+		c = a;		// 10
+		a = b;		// 20 
+		b = c;
+		
+		System.out.println(a);
+		System.out.println(b);
+		
+		
+		
+		
+		
 		String strScore = "90"; 
 		String strMoney = "10000000000";
 		String strEye = "0.2";

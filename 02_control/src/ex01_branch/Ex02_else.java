@@ -4,7 +4,7 @@ public class Ex02_else {
 
 	public static void main(String[] ars) {
 		
-		int score = 50;
+		int score = 60;
 		
 		if(score >= 60)	{
 			System.out.println("합격");
